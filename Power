@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class Power1 
+{
+	public static void main(String[] args) 
+	{
+		Scanner S = new Scanner(System.in);
+		System.out.print("Enter the value of X : ");
+		float X = S.nextFloat();
+		System.out.print("Enter the value of Y : ");
+		int Y = S.nextInt();
+
+		float result = 1 ;
+		
+
+		 for (int i=1 ; i<=Y ; i++ )
+		 {
+			 result *= X;
+		 }
+			System.out.println("The Power is : " + result);
+	}
+}
