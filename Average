@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class Average 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.print("How many number :");
+		float N = s.nextFloat();
+        float sum =0;
+		for (int i = 1; i<=N  ; i++ )
+		{
+			System.out.print("Enter The "+i+" Number : ");
+			int num = s.nextInt();
+			 
+			sum += num;
+		}
+         double avg = sum/N;
+		System.out.println("The avg is :"+avg);
+	}
+}
