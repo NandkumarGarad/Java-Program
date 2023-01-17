@@ -1,0 +1,39 @@
+You are given a list of T integers, for each of them you have to calculate the number of occurrences of the digit 4 in the decimal representation.
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String [] args)
+    {
+        Scanner Sc = new Scanner(System.in);
+        int T = Sc.nextInt();
+        
+        for (int i = 1; i <= T; i++)
+        {
+            int n = Sc.nextInt();
+            int count=0;
+            while (n > 0)
+            {
+            int  rem = n % 10;
+                if (rem == 4)
+                {
+                    count++;
+                }
+                n = n / 10;
+            }
+            
+           System.out.println(count);
+        }
+    }
+}
