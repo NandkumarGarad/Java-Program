@@ -1,0 +1,49 @@
+/*
+      -
+    - - -
+  - - - - -
+- - - - - - -
+  - - - - -
+    - - -
+      -
+
+
+
+*/
+
+
+
+class Dimond
+{
+	public static void main(String[] args) 
+	{
+		int N = 7, space=N/2,star =1;
+		for (int i=0 ; i<N ; i++ )
+		{
+			for (int j=0 ; j<space ; j++ )
+			{
+				System.out.print(" "+" ");
+			}
+			for (int j=0; j< star ; j++ )
+			{
+				System.out.print("-"+" ");
+			}
+			 
+			System.out.println();
+			 
+		if (i< N/2)
+		{
+			star = star +2;
+			space--;
+		}
+		 else
+			{
+			 star = star - 2;
+			 space++;
+			}
+		 
+		}
+		 
+		 
+	}
+}
