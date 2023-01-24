@@ -1,0 +1,44 @@
+import java.util.Scanner;
+class ArmstrongNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner A = new Scanner(System.in);
+		
+		System.out.print("Enter The  Number : ");
+		int N = A.nextInt();  // 153
+		int temp =N;          //153
+		int count =0;          // 3
+
+		for (int i=N; i!=0 ; i/=10 )
+		{
+			count++;	 
+		}  
+	//	System.out.println(count);
+		 
+		int sum = 0; //27
+        for (int i=temp ; i!=0  ; i/=10 )
+        {
+			int rem=i%10; //5
+			int pow = 1; //27
+			for ( int j=0 ; j<count ; j++ )
+			{
+				pow*=rem;  //3
+			}
+			sum=sum+pow;
+			//System.out.println(sum);
+			 
+        }
+		System.out.println(sum);
+		if (N == sum)
+		{
+			System.out.println("The Given Number is Amstrong Number "+N);
+		}
+		else
+		{
+			System.out.println("The Gibven Number is Not Amstrong Number "+N);
+		}
+
+	  
+	}
+}
