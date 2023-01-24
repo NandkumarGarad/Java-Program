@@ -1,0 +1,53 @@
+/*
+
+An Automorphic number is a number whose square “ends” in the same digits as the number itself. Examples: 5*5 = 25, 6*6 = 36, 25*25 = 625
+
+*/
+
+
+
+import java.util.Scanner;
+class AutomorphicNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner S = new Scanner(System.in);
+		
+		System.out.print("Enter the Number : ");
+		int N = S.nextInt(); // 25
+
+		int square = N*N;    // 625
+		//System.out.println(square);
+
+		int rev1=0;  // 52
+		       //i=25 2!=0   0
+		for (int i=N; i!=0 ; i/=10 )
+		{
+			rev1 =rev1*10+i%10;
+		}
+		 //System.out.println(rev1);
+
+         int rev = 0;//5
+		     //   i = 625    62!=0
+		 int i;	
+		 for ( i=square ; i!=0 ; i/=10 )
+		 {        // 5*10+2
+			  rev =rev*10+i%10;//52
+			  if (rev1==rev) //52==52
+			  {
+				  System.out.println("It is Automorphic Number  ");
+				  break;
+			  }
+			 
+				  
+		 }
+		 if (i==0)
+		 {
+			 System.out.println("It is Not Automorphic Number.");
+		 }
+		// System.out.println(rev);
+		 
+
+		 
+	}
+}
