@@ -1,0 +1,34 @@
+import java.util.Scanner;
+class CoPrimeNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+
+		System.out.print("Enter the first Number :");
+		int n1 = s.nextInt();
+
+		System.out.print("Enter the Second Number :");
+		int n2 = s.nextInt();
+
+		int hcf = (n1<n2)? n1:n2;
+		int i;
+
+		for ( i=hcf ; i>1 ; i-- )
+		{
+			if (n1%i==0 && n2%i==0)
+			{
+				//System.out.println(i);
+				break;
+			}
+		}
+		if (i == 1)
+		{
+		System.out.println(" It is CoPrime Number. ");
+		}else
+		{
+		System.out.println(" It is Not CoPrime Number. ");
+		}
+
+	}
+}
