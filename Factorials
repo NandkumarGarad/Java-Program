@@ -15,3 +15,97 @@ class Factorials
 		System.out.println(fact);
 	}
 }
+
+
+
+
+
+
+//program 1 : find the factorial of given number 
+
+import java.util.Scanner;
+class Factorial 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+
+		System.out.print("Enter the staring Number : ");
+		int start = s.nextInt(); // 0
+		
+		System.out.print("Enter the ending Number : ");
+		int end = s.nextInt(); // 0
+
+        for (int i=start ; i<=end ; i++ )
+        {
+			int fact=1;// 120
+            int temp =i;
+				 //0>0
+			while (temp>1)
+			{
+				fact*=temp; //120
+
+				temp--;
+			}
+			System.out.println(i+ "  factorial is : " +fact);
+        }
+		 
+	}
+}
+
+
+
+
+//  while loop
+
+/*
+import java.util.Scanner;
+class Factorial 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+
+		System.out.print("Enter the Number : ");
+		int n = s.nextInt(); // 0
+		
+		int fact=1;// 120
+
+             //0>0
+		while (n>1)
+		{
+			fact*=n; //120
+
+			n--;
+		}
+		System.out.println(n+ "  factorial is : " +fact);
+	}
+}
+
+
+
+
+// for loop
+
+
+
+
+/*
+import java.util.Scanner;
+class FactorialOfNumber 
+{
+	public static void main(String[] args) 
+	{    Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter Number");
+		 int num = sc.nextInt();
+		 int fact=1;
+		 for(int i=num; i>0; i--)
+		{
+			fact=fact*i;
+		}
+		System.out.println(fact);
+	}
+}
+
+*/
