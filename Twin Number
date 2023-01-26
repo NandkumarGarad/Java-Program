@@ -1,0 +1,50 @@
+import java.util.Scanner;
+class TwinPrimeNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner v = new Scanner(System.in);
+		
+		System.out.print("Enter the first Number :");
+		int n1 = v.nextInt();//17
+
+		System.out.print("Enter the second Number :");
+		int n2 = v.nextInt();//19
+       
+		if (n2-n1==2 || n1-n2==2)
+		{
+			int count = 0;
+			for (int i=2 ; i<=n1/2 ; i++ )
+			{
+				if (n1%i==0)
+				{
+					count++;
+				}
+			}
+			//System.out.println(count);
+// n2 check
+			int count1 = 0;
+			for (int i=2 ; i<=n2/2 ; i++ )
+			{
+				if (n2%i==0)
+				{
+					count1++;
+				}
+			}
+
+			//System.out.println(count1);
+			if (count==count1 && count1==0)
+			{
+				System.out.println("It is Twin Prime Number "+n1+" and "+n2);
+			}
+			else
+			{
+				System.out.println("It is Not Twin Prime Number "+n1+" and "+n2);
+			}
+		}
+		else
+		{
+			System.out.println(n1+ " and " +n2 +" is not Twin Prime Number ");
+		}
+	}
+}
