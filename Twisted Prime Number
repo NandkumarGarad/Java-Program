@@ -1,0 +1,50 @@
+import java.util.Scanner;
+class TwistedPrime 
+{
+	public static void main(String[] args) 
+	{
+		Scanner h =new Scanner(System.in);
+
+		System.out.print("Enter the Number : ");
+		int num = h.nextInt();
+		
+		int count = 0;
+		for (int i=2 ; i<=num/2 ; i++ )
+		{
+			if (num%i==0)
+			{
+				count++;
+			}
+		}
+		if (count==0)
+		{
+			int rev=0;
+			for (int j=num ; j !=0 ; j/=10 )
+			{
+				rev = rev *10+j%10;
+			}
+			System.out.println(rev);
+
+			int count1 =0;
+			for (int k=2 ; k<=rev/2 ; k++ )
+			{
+				if (rev%k==0)
+				{
+					count1++;
+				}
+			}
+			if (count1==0)
+			{
+				System.out.println("It is Twisted Prime Number ");
+			}
+			else
+			{
+				System.out.println("It is Not Twisted Prime Number ");
+			}
+		}
+		else
+		{
+				System.out.println("It is Not Prime Number ");
+		}
+	}
+}
