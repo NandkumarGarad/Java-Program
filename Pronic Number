@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class PronicNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner p = new Scanner(System.in);
+		
+		System.out.print("Enter the Number : ");
+		int num = p.nextInt();
+
+		int n1=1;
+		int n2=2;
+		int n3;
+		while (true)
+		{
+			n3=n1*n2;
+			//System.out.println(n3);
+			if (n3 == num)
+			{
+				System.out.println(n1+" and "+n2+" It is Pronic Number "+num);
+				break;
+			}else if (n3>num)
+			{
+				System.out.println("It is Not Pronic Number "+num);
+				break;
+			}
+			else
+			{
+			n1++;
+			n2++;
+			}
+		}
+
+	}
+}
