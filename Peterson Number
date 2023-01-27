@@ -1,0 +1,45 @@
+/*
+Peterson Number
+A number is said to be Peterson if the sum of factorials of each digit
+is equal to the sum of the number itself.
+
+Ex = 145 = 1! + 4! + 5! = 1+ 4*3*2*1 + 5*4*3*2*1 =1+24+120  ==> 145;
+*/
+
+
+
+import java.util.Scanner;
+class  PetersonNumber
+{
+	public static void main(String[] args) 
+	{
+		Scanner m = new Scanner(System.in);
+		
+		System.out.print("Enter the Number : ");
+		int n = m.nextInt();
+		
+		int temp = n;
+		int sum = 0;
+		while (temp>0)
+		{
+			int rem = temp % 10;
+			
+			int pow =1;
+			for (int i=rem ; i>0 ; i-- )
+			{
+				pow*=i;
+			}
+			sum+=pow;
+			temp/=10;
+		}
+		//System.out.println(sum);
+		if (sum == n)
+		{
+			System.out.println("It is Peterson Number "+n);
+		}
+		else
+		{
+			System.out.println("It is Not Peterson Number "+n);
+		}
+	}
+}
