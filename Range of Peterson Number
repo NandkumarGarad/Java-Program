@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class  PetersonNumber
+{
+	public static void main(String[] args) 
+	{
+		Scanner m = new Scanner(System.in);
+		
+		System.out.print("Enter the Starting Number : ");
+		int start = m.nextInt();
+		System.out.print("Enter the Ending Number : ");
+		int end = m.nextInt();
+		
+		for (int i=start ; i<=end ; i++ )
+		{
+			int temp = i;
+			int sum = 0;
+			while (temp>0)
+			{
+				int rem = temp % 10;
+				
+				int pow =1;
+				for (int j=rem ; j>0 ; j-- )
+				{
+					pow*=j;
+				}
+				sum+=pow;
+				temp/=10;
+			}
+			//System.out.println(sum);
+			if (sum == i)
+			{
+				System.out.println("It is Peterson Number "+i);
+			}
+			 
+		}
+		 
+	}
+}
