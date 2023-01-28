@@ -1,0 +1,44 @@
+// Java Program to Swap Two Numbers
+
+
+import java.util.Scanner;
+class SwapOFTwoNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner Sc = new Scanner(System.in);
+
+		System.out.print("Enter the First Number : ");
+		int a = Sc.nextInt();
+		
+		System.out.print("Enter the Second Number : ");
+		int b = Sc.nextInt();
+
+		int temp=a;
+		a=b;
+		b=temp;
+
+		System.out.println(a);
+		System.out.println(b);
+
+		//Swap two numbers without using temporary variable
+
+		System.out.print("Enter the Third Number : ");
+		int c = Sc.nextInt();
+		
+		System.out.print("Enter the Forth Number : ");
+		int d = Sc.nextInt();
+
+		c= c-d;
+		d=c+d;
+		c=d-c;
+
+
+				System.out.println(c);
+
+		System.out.println(d);
+
+
+
+	}
+}
