@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class SumOfTwoNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner (System.in);
+		
+		System.out.print("Enter the first Value : ");
+		int a = s.nextInt();
+
+		System.out.print("Enter the first Value : ");
+		int b = s.nextInt();
+
+		sumOfTwoNumber(a,b);
+
+		square(a);
+	}
+
+	public static void sumOfTwoNumber(int a, int b)
+	{
+		System.out.println("The sum is two values :"+(a+b));
+	}
+
+	public static void square(int a)
+	{
+		int res = a*a;
+		System.out.println("The suare of a is :"+res);
+	}
+}
