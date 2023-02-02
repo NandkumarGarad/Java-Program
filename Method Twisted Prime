@@ -1,0 +1,67 @@
+import java.util.Scanner;
+class TwistedPrime 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner (System.in);
+
+		System.out.print("Enter the Number : ");
+		int num = sc.nextInt();
+		
+		boolean ans1 = checkPrime(num) ;
+
+		int rev = revNumber(num);
+		//System.out.println(" The reverse number is : "+rev);
+		boolean ans2 = checkPrime(rev);
+		//System.out.println(ans2);
+		//System.out.println(ans1);
+
+		if (ans1)
+		{
+			//System.out.println("It is Prime Number : "+ num);
+			if (ans2)
+			{
+				System.out.println("It is Twisted Prime Number : "+ rev);
+			}
+			else
+			{
+				System.out.println("It is Not Twisted Prime Number : "+ rev);
+			}
+
+		}
+		else
+		{
+		System.out.println("It is Prime Number : "+ num);
+		}
+
+	}
+
+	public static boolean checkPrime(int num)
+	{
+		boolean ans1=true;
+		 for (int i=2 ; i<=num/2 ; i++ )
+		 {
+			 if (num%i==0)
+			 {
+				ans1 = false;
+			 }
+		 }
+
+		 return ans1;
+	}
+
+	public static int revNumber(int num)
+	{
+		int rev = 0;
+		while (num >0)
+		{
+			int rem = num%10;
+
+			rev = rev*10+rem;
+			num/=10;
+		}
+		
+		//System.out.println(rev);
+		return rev;
+	}
+}
