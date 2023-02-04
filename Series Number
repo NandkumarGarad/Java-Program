@@ -1,0 +1,39 @@
+
+
+//  2^0 + 2^1 + 2^2 + ..............2^N
+
+
+import java.util.Scanner;
+class SumOfSerise 
+{
+	public static void main(String[] args) 
+	{
+		Scanner n = new Scanner(System.in);
+		
+		System.out.print("Enter the base value : ");
+		int base=n.nextInt();
+		System.out.print("how many number : ");
+		int N=n.nextInt();
+		
+	//	int pow = power(base,raise);
+	//	System.out.println(pow);
+		
+		int sum = 0;
+		for ( int i=0 ; i<=N ; i++)
+		{
+			sum = sum + power(base,i);
+		}
+		System.out.println("The sum of serise is : "+sum);
+	}
+
+	public static int power(int base,int raise)
+	{
+		int pow = 1;
+		for (int i=1 ; i<=raise ; i++ )
+		{
+			pow*=base;
+		}
+		return pow;
+	}
+
+}
