@@ -1,0 +1,135 @@
+
+/*
+ Program 1 : Even or Odd.
+ Program 2 : Prime Number or Not.
+ Program 3 : Sum Of Digit of a number.
+ Program 4 : product Of Digit of a number.
+ Program 5 : Sum Of Digit of a number.
+ Program 6 : Spy Number or Not.
+ Program 7 : Reverse Number.
+ Program 8 : Palindrome Number or Not.
+ Program 9 : Find factor of given Number.
+
+
+*/
+import java.util.Scanner;
+class NumberProgram 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter the Number : ");
+		int num = sc.nextInt();
+
+		System.out.println(checkEven(num));  // cheking the given number is Even or odd number 
+		System.out.println(checkPrime(num));  // cheking the given number is Prime number or Not.
+		System.out.println(num+" Sum of Digit is : "+sumOfDigit(num)); 
+		System.out.println(num+" product of Digit is : "+ProdOfDigit(num)); 
+		
+		// Spy number or Not
+		int sum = sumOfDigit(num);
+		int prod = ProdOfDigit(num);
+		if (sum==prod)
+		{
+			System.out.println(num+ " Is Spy Number.");
+		}
+		else
+		{
+			System.out.println(num+" Is Not Spy Number.");
+		}
+
+		// revese number 
+
+		System.out.println(num+" Reverse is :"+revNumber(num));  // revese number
+
+		// check palindrome
+		String ans3= num==revNumber(num) ? num+" is Palindrome Number." : num+" Is Not palindrome Number.";
+		System.out.println(ans3);
+
+
+		System.out.print(num+ " Factor is : ");  // find the factor of a given number 
+		for (int m=1 ; m<=num ; m++ )
+		{
+			if (num%m==0)
+			{
+				System.out.print(m+" ");
+			}
+		}
+	}
+
+
+
+// Method start 
+
+
+
+
+// check even or odd method
+	public static String checkEven(int num)    
+	{
+		String ans = num%2==0 ? num+" is Even Number." : num+" is Odd Number.";
+
+		return ans;
+	}
+
+// check prime method
+	public static String checkPrime(int num)
+	{
+		boolean flag =false;
+		for (int i=2 ; i<=num/2 ; i++ )
+		{
+			if (num%i==0)
+			{
+				flag = true;
+				break;
+			}
+		}
+
+		String ans2= flag==false ? num+" is Prime Number." : num+" is Not Prime Number.";
+
+		return ans2;
+	}
+
+
+// sum of digit method
+	public static int sumOfDigit(int num)
+	{
+		int sum = 0;
+		while (num != 0)
+		{
+			int rem=num%10;
+
+			sum = sum + rem;
+			num = num / 10;
+		}
+		return sum;
+	}
+
+// product of digit method
+	public static int ProdOfDigit(int num)
+	{
+		int prod = 1;
+		for ( int l= num ; l!=0 ; l/=10 )
+		{
+			int rem = l%10;
+			prod *= rem;
+		}
+
+		return prod;
+	}
+
+// recerse number method
+	public static int revNumber(int num)
+	{
+		int rev = 0;
+		while (num>0)
+		{
+			rev = rev*10+num%10;
+			num/=10;
+		}
+		return rev;
+	}
+
+ 
+}
