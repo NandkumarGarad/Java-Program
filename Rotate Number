@@ -1,0 +1,95 @@
+import java.util.Scanner;
+class  CircularPrimne  // 131
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner (System.in);
+		System.out.print("Enter the Number : ");
+		int num = s.nextInt();
+		int temp=num;
+		
+		if (checkPrime(num))
+		{
+			//System.out.println("It is Prime Number");
+		//	System.out.println(rotateNumber(num));  // 113
+			
+			int ip = rotateNumber(num); //113
+
+			while (temp != ip)
+			{
+				if (checkPrime(ip))
+				{
+					ip=rotateNumber(ip);
+				//	System.out.println("It is Rotated Prime Number");
+				}
+				else
+				{
+					break;
+					//System.out.println("It is Not Rotated Prime Number");
+				}
+
+			}
+			if (temp==ip)
+			{
+				System.out.println("It is Rotated Prime Number");
+			}
+			else
+			{
+				System.out.println("It is Not Rotated Prime Number");
+			}
+			 
+		}else
+		{
+			System.out.println("It is Not Prime Number");
+		}
+      
+	  
+
+	}
+		
+	public static boolean checkPrime(int num)   
+	{   
+		for (int i=2 ; i<= num/2 ; i++ )
+		{    
+			if (num%i==0)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public static int rotateNumber(int num)
+	{
+		int last = num%10;
+		int count = raise(num);
+		num/=10;
+
+
+		int ans = last*power(10,count-1)+num;
+
+		return ans;
+
+	}
+	
+	public static int raise(int num)
+	{
+		int count=0;
+		for (int i=num ; i!=0 ; i/=10 )
+		{
+			count++;
+		}
+		return count;
+	}
+
+	public static int power(int base ,int raise)
+	{
+		int pow =1;
+		for (int i=0 ; i<raise ; i++ )
+		{
+			pow*=base;
+		}
+		return pow;
+	}
+
+}
