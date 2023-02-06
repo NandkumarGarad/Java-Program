@@ -1,0 +1,56 @@
+import java.util.Scanner;
+class RangeOfUglyNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner ip = new Scanner (System.in);
+		System.out.print("Enter the Staring Number : ");
+		int start = ip.nextInt();
+		System.out.print("Enter the Ending Number : ");
+		int end = ip.nextInt();
+		int count = 0;
+		for (int i=start ; i<=end ; i++ )
+		{
+		    if (uglyNumber(i)==1)
+		    {
+				System.out.println(i+" is Ugly Number");
+				count++;
+		    }	 
+			else
+			{
+				System.out.println(i+" is Not Ugly Number");
+			}
+		}
+		System.out.println(start+ " and "+end +" = "+count+" Ugly Number.");
+	}
+
+		public static int uglyNumber(int i)
+		{
+			 
+			while (i!=1)
+			{
+			
+				if (i%2==0)
+				{
+					i/=2;
+				}
+				else if (i%3==0)
+				{
+					i/=3;
+				}
+				else if (i%5==0)
+				{
+					i/=5;
+				}
+				else
+				{
+					break;
+				}
+
+				i=i;
+			}
+			 
+			 return i;
+		}
+	
+}
