@@ -1,0 +1,48 @@
+import java.util.Scanner;
+class Automorphic1
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner (System.in);
+
+		System.out.print("Enter the Number : ");
+		int num = s.nextInt();
+		
+		int count = count(num);
+		int pow = power(10,count);
+		//System.out.println(count(num));
+		//System.out.println("Square :"+power(num,2));
+		//System.out.println(power(10,count));
+
+		if ((num*num%pow)==num)
+		{
+			System.out.println(num+" is Automorphic Number.");
+		}
+		else
+		{
+			System.out.println(num+" is Not Automorphic Number.");
+		}
+		 
+
+	}
+
+	public static int count(int num)
+	{
+		int ct=0;
+		for (int i=num ; i!=0 ; i/=10 )
+		{
+			ct++;
+		}
+		return ct;
+	}
+
+	public static int power(int base ,int raise)
+	{	
+		int pow=1;
+		for ( int i=1 ; i<=raise ; i++)
+		{
+			pow *=base;
+		}
+		return pow;
+	}
+}
