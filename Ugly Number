@@ -1,0 +1,41 @@
+import java.util.Scanner;
+class UglyNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("Enter the Starting Number : ");
+		int start = s.nextInt();
+		System.out.print("Enter the Ending Number : ");
+		int end = s.nextInt();
+		int temp=num;
+
+		while (num!=1)
+		{
+		
+			if (num%2==0)
+			{
+				num/=2;
+			}
+			else if (num%3==0)
+			{
+				num/=3;
+			}
+			else if (num%5==0)
+			{
+				num/=5;
+			}
+			else
+			{
+				break;
+			}
+
+			num =num;
+		}
+
+		String ans = num==1 ? temp+" is Ugly Number." : temp+" is Not Ugly Number.";
+		System.out.println(ans);
+
+	}
+}
