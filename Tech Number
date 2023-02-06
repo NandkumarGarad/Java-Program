@@ -1,0 +1,67 @@
+/*
+2025 
+
+20 + 25 == 45
+
+45*45 == 2025  hence it is Tech number.
+
+*/
+
+
+import java.util.Scanner;
+class TechNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner (System.in);
+		System.out.print("Enter the Number : ");
+		int num = s.nextInt();
+
+		int count =count(num);
+		int pow = power(10,count/2);
+		//System.out.println(count);
+
+		if (count%2==0)
+		{
+			//System.out.println("count is even");
+			int first = num/pow;
+			int second = num%pow;
+			int sum =first+second;
+
+			if (sum*sum==num)
+			{
+				System.out.println(num+" It is Tech Number.");
+			}
+			else
+			{
+				System.out.println(num+ " It is not Tech Number.");
+			}
+		}
+		else
+		{
+			System.out.println("count of digit is Not even.");
+		}
+
+
+	}
+
+	public static int count(int num)
+	{
+		int ct =0;
+		for (int i=num ; i!=0 ; i/=10 )
+		{
+			ct++;
+		}
+		return ct;
+	}
+
+	public static int power(int base,int raise)
+	{
+		int pow =1;
+		for (int i=1 ; i<=raise ; i++ )
+		{
+			pow *= base;
+		}
+		return pow;
+	}
+}
