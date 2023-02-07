@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class BuncyNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner (System.in);
+		System.out.print("Enter the the number : ");
+		int num = s.nextInt();
+		
+		boolean isDecrease=false;
+		boolean isIncrease=false;
+		while (num>9)
+		{
+			int last = num%10;
+			num/=10;
+			int secondLast = num % 10;
+
+			if (last>secondLast)
+			{
+				 isDecrease = true;
+			}
+			else if (last<secondLast)
+			{
+				isIncrease =true;
+			}
+			if ( isDecrease==true && isIncrease==true)
+			{
+				break;
+			}
+		}
+
+		if (isDecrease==true && isIncrease==true)
+		{
+			System.out.println("It is Bouncy Number");
+		}else
+		{
+			System.out.println("It is Not Bouncy Number");
+		}
+	}
+}
