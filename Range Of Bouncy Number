@@ -1,0 +1,70 @@
+import java.util.Scanner;
+class RangeOfBouncy 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner (System.in);
+		
+		System.out.print("Enter the Starting Number :");
+		int start = s.nextInt();
+		
+		System.out.print("Enter the Starting Number :");
+		int end = s.nextInt();
+		
+		for (int i= start ; i<= end  ; i++ )
+		{
+			if (i>100)
+			{
+			
+				if (isBouncy(i))
+				{
+					System.out.println(i+" is Bouncy Number.");
+				}
+				else
+				{
+					System.out.println(i+" is Not Bouncy Number.");
+				}
+			}else
+			{
+					System.out.println("Bouncy Number Strat from : 101");
+					break;
+			}
+
+			
+		}
+
+	}
+
+	public static boolean isBouncy(int num)
+	{
+		boolean isDecrease=false;
+		boolean isIncrease=false;
+		while (num>9)
+		{
+			int last = num%10;
+			num/=10;
+			int secondLast=num%10;
+			
+			if (last>secondLast)
+			{
+				isDecrease = true;
+			}
+			else if (last < secondLast)
+			{
+				isIncrease= true;
+			}
+			if (isDecrease==true && isIncrease==true)
+			{
+				break;
+			}
+		}
+		if (isDecrease==true && isIncrease==true)
+		{
+			return true;
+		}else
+		{
+			return false;
+		}
+	}
+
+}
