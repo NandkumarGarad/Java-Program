@@ -1,0 +1,79 @@
+/*
+
+Enter the starting Number : 1
+Enter the ending Number : 1000000
+1 is Anutomorphic Number.
+5 is Anutomorphic Number.
+6 is Anutomorphic Number.
+25 is Anutomorphic Number.
+76 is Anutomorphic Number.
+376 is Anutomorphic Number.
+625 is Anutomorphic Number.
+9376 is Anutomorphic Number.
+
+
+*/
+
+import java.util.Scanner;
+class RangeOfAutomorphicNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter the starting Number : ");
+		int start = s.nextInt();
+		System.out.print("Enter the ending Number : ");
+		int end = s.nextInt();
+
+		for (int i= start ; i<=end ; i++ )
+		{
+			if (isAutomorphic(i))
+			{
+				System.out.println(i+" is Anutomorphic Number.");
+			}
+			//else
+			//{
+			//	System.out.println(i+" is Not Anutomorphic Number.");
+			//}
+		}
+
+	}
+
+	public static boolean isAutomorphic(int num)
+	{
+		int square = num*num;
+		int count = count(num);
+
+		int ans = square%power(10,count);
+
+		if (num==ans)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+
+	}
+	public static int count(int num)
+	{
+		int ct=0;
+		for (int i=num ; i!=0 ; i/=10 )
+		{
+			ct++;
+		}
+		 return ct;
+	}
+	
+	public static int power(int base, int raise)
+	{
+		int pow = 1;
+
+		for (int i=1 ; i<=raise ; i++ )
+		{
+			pow *= base;
+		}
+		return pow;
+	}
+}
