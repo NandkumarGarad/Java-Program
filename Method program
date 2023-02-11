@@ -1,0 +1,381 @@
+
+import java.util.Scanner;
+class Test1 
+{
+	public static void main(String[] args) 
+	{
+		 Scanner s  = new Scanner (System.in);
+		 System.out.print("Enter the Number : ");
+		 int num = s.nextInt();
+		  
+
+	}
+}
+
+
+/*
+
+Enter the Number : 5
+    *
+  * * *
+* * * * *
+  * * *
+    *
+
+		 int star = 1;
+		 int space =num/2;
+
+		 for ( int i = 0; i<num ; i++ )
+		 {
+			 for (int j=0 ; j<space ; j++ )
+			 {
+				 System.out.print(" "+" ");
+			 }
+			 for (int j=0 ; j<star ; j++ )
+			 {
+				 System.out.print("*"+" ");
+			 }
+			 System.out.println();
+			 if (i<num/2)
+			 {
+				 star = star+2;
+				 space--;
+			 }
+			 else
+			 {
+				 star = star -2;
+				 space++;
+			 }
+		 }
+	
+// Strong number 
+
+Enter the Number : 145
+It is Strong Number.145
+
+		 int temp = num;
+		 int sum = 0;
+		 while (temp>0)
+		 {
+			 int rem= temp%10;
+			 sum = sum + AllMethod.factorial(rem);
+			 temp/=10;
+		 }
+		 if (num == sum )
+		 {
+			 System.out.println("It is Strong Number."+num);
+			 return;
+		 }
+			 System.out.println("It is Not Strong Number."+num);
+		 
+		 
+/// Harshad Number 
+
+Enter the Number : 21
+It is Harshad Number. : 21
+
+ int sum = 0;
+		 for (int i=num ; i!=0 ; i/=10 )
+		 {
+			 int rem = i%10;
+			 sum = sum + rem;
+		 }
+
+		 if (num%sum==0)
+		 {
+			 System.out.println("It is Harshad Number. : "+num);
+			 return;
+		 }
+			 System.out.println("It is Not Harshad Number. : "+num);
+
+
+// neon number 
+
+Enter the Number : 9
+ It is Neon Number. :9
+
+
+		 int square = num *num;
+		 int sum =0;
+
+		 for (int i=square; i!=0 ; i/=10 )
+		 {
+			 int rem = i%10;
+			 sum +=rem;
+		 }
+
+		 String ans = (sum==num) ? " It is Neon Number. :"+num :  " It is not  Neon Number. :"+num   ;
+		 System.out.println(ans);
+		 
+
+
+// Diserium number 
+
+Enter the Number : 135
+It is Disraum number : 135
+
+
+	 int count = AllMethod.count(num);
+		 int sum =0;
+
+		 for (int i=num ; i!=0 ; i/=10 )
+		 {
+			 int rem= i%10;
+			 sum = sum+ AllMethod.power(rem,count);
+			 count--;
+		 }
+		
+		if (sum == num )
+		{
+			System.out.println("It is Disraum number : "+ num);
+			return;
+		}
+			System.out.println("It is Not Disraum number : "+ num);
+
+// Bouncy number 
+
+Enter the Number : 14782
+It is Bouncy Number : 14782
+
+Enter the Number : 12345
+It is Not Bouncy Number : 12345
+
+
+ int temp=num;
+		
+		boolean isDecrease = false;
+		boolean isIncrease = false;
+		
+		while (num>9)
+		{
+			int first = num%10;
+			num/=10;
+			int second =num%10;
+
+			if (first<second)
+			{
+				isDecrease = true;
+			}else if (first>second)
+			{
+				isIncrease = true;
+			}
+			if (isDecrease==true && isIncrease==true)
+			{
+				break;
+			}
+		}
+
+		if (isDecrease==true && isIncrease==true)
+		{
+			System.out.println("It is Bouncy Number : "+temp);
+			return;
+		}
+			System.out.println("It is Not Bouncy Number : "+temp);
+		
+
+// tech Number 
+Enter the Number : 2025
+It is Tech Number.
+
+int count=AllMethod.count(num);
+ int first = num / AllMethod.power(10,count/2);
+		// System.out.println(first);
+		 int second = num % AllMethod.power(10,count/2);
+		 //System.out.println(second);
+
+		 int sum = first+second;
+
+		 int square = sum*sum;
+
+		 if (num == square)
+		 {
+			 System.out.println("It is Tech Number.");
+			 return;
+		 }
+			 System.out.println("It is Not Tech Number.");
+
+
+// perfect Number
+Enter the Number : 6
+It is Perfect Number.
+
+ int sum=0;
+		
+		 for (int i=1 ; i<=num/2 ; i++ )
+		 {
+			 if (num%i==0)
+			 {
+				 sum=sum+i;
+			 }
+		 }
+		 
+		 if (sum==num)
+		 {
+			 System.out.println("It is Perfect Number.");
+			 return;
+		 }
+			 System.out.println("It is Not Perfect Number.");
+
+
+// twisted Prime
+
+Enter the Number : 37
+It is Twisted Prime Number
+
+if (AllMethod.isPrime(num))
+		 {
+			// System.out.println("It is Prime");
+			int rev = AllMethod.revNumber(num);
+			if (AllMethod.isPrime(rev))
+			{
+			 System.out.println("It is Twisted Prime Number");
+			}
+			else
+			 {
+			 System.out.println("It is Not Twisted Prime number.");
+			 }
+			 
+		 }
+		 else
+		{
+			 System.out.println("It is Not Prime");
+		}
+
+
+// CoPrime 
+Enter the second Number : 19
+It is coPrime Nunber.
+
+ Scanner s  = new Scanner (System.in);
+		 System.out.print("Enter the first Number : ");
+		 int num = s.nextInt();
+		 System.out.print("Enter the second Number : ");
+		 int num1 = s.nextInt();
+			
+		 if (num-num1==2 || num1-num==2)
+		 {
+			if (AllMethod.isPrime(num) && AllMethod.isPrime(num1))
+			{
+				System.out.println("It is coPrime Nunber.");
+			}
+			else
+			 {
+				System.out.println("It is not coPrime Nunber.");
+			 }
+
+		 }
+		 else
+		{
+			 System.out.println("differnce not 2");
+		}
+
+ 
+ // pronic Number
+
+ 
+Enter the Number : 42
+It is pronic Number
+
+ int num = s.nextInt();
+	 
+		int a=1;
+		int b=2;
+		int c;
+		
+		while (true)
+		{
+			c=a*b;
+			if (c==num)
+			{
+				System.out.println("It is pronic Number");
+				break;
+			}else if (c>num)
+			{
+				System.out.println("It is not Pronic Number");
+				break;
+			}else
+			{
+				a++;
+				b++;
+			}
+		}
+	
+	// Fibonacci number 
+	
+Enter the Number : 8
+It is fibonacci Number
+
+	int a=0;
+		int b=1;
+		int c;
+		
+		while (true)
+		{
+			c=a+b;
+			if (c==num)
+			{
+				System.out.println("It is fibonacci Number");
+				break;
+			}else if (c>num)
+			{
+				System.out.println("It is not Fibonacci Number");
+				break;
+			}else
+			{
+				a=b;
+				b=c;
+			}
+		}
+
+
+// happy number 
+
+
+ int num = s.nextInt();
+		int sum =sumOfSquareOfDigit(num);
+		  while (sum >9)
+		  {
+			  sum = sumOfSquareOfDigit(sum);
+		  }
+	 
+			  
+
+		if (sum ==1)
+		{
+			System.out.println("It is Happy number");
+			return;
+		}
+			System.out.println("It is Not Happy number");
+
+
+
+// Ugly Nubmber
+
+
+while (num>0)
+		 {
+
+			 if (num%2==0)
+			 {
+				 num/=2;
+			 }else if (num%3==0)
+			 {
+				 num/=3;
+			 }else if (num%5==0)
+			 {
+				 num/=5;
+			 }else
+			 {
+				 break;
+			 }
+		 }
+		 if (num == 1)
+		 {
+			 System.out.println("It is ugly number.");
+		 }else
+		{
+			 System.out.println("It is Not ugly number.");
+		}
+
+
+*/
