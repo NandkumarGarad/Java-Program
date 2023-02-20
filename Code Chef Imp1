@@ -1,0 +1,37 @@
+que=>
+You are given an integer ?
+N. Find the largest integer between 1 and 10
+10 (inclusive) which divides �N.
+
+Explaneation :
+The divisors of 91 are 1,7,13,91, out of which only 1 and 7 are in the range [1,10] Therefore, the answer is max(1,7)=7.
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int N = s.nextInt();
+		
+		for (int j=10;j>=1;j--){
+		    if (N%j==0){
+		      
+		            System.out.println(j);
+		            break;
+		        
+		        
+		    }
+		}
+		
+	}
+}
