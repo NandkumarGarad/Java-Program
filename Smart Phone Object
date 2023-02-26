@@ -1,0 +1,42 @@
+class SmartPhone
+{
+	String name;
+	int prise;
+	String colour;
+	int ram;
+	int rom;
+
+}
+
+
+
+class SmartPhoneDriver 
+{
+	public static void main(String[] args) 
+	{
+		SmartPhone s1 = new SmartPhone();
+		System.out.println(s1);
+
+		System.out.println("Name   : " + s1.name);
+		System.out.println("Prise  : " +s1.prise);
+		System.out.println("Colour : "+s1.colour);
+		System.out.println("RAM    : "+s1.ram);
+		System.out.println("ROM    : "+s1.rom);
+		System.out.println("=======================================");
+
+		SmartPhone s2 = new SmartPhone();
+		System.out.println(s2);
+
+		s2.name = "iPhone";
+		s2.prise= 72000;
+		s2.colour="Black";
+		s2.ram = 8;
+		s2.rom = 128;
+		
+		System.out.println("Name : "+s2.name);
+		System.out.println("Prise: "+s2.prise);
+		System.out.println("Colour : "+s2.colour);
+		System.out.println("RAM : " + s2.ram);
+		System.out.println("ROM : "+s2.rom);
+	}
+}
