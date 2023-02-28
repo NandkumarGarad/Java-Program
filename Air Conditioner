@@ -1,0 +1,75 @@
+class AC 
+{
+	 String brand;
+	 double prise;
+	 String color;
+	static int mintemp = 10;
+	static int maxtemp = 30;
+	static int ambienttemp=20;
+
+	 public void displayAC()
+	{
+		 System.out.println("Brand :"+brand);
+		 System.out.println("Prise :"+prise);
+		 System.out.println("color :"+color);
+		 System.out.println("============================================");
+	}
+
+	public void mintemp()
+	{
+		System.out.println("Minimum Temp is : "+mintemp);
+	}
+	public void maxtemp()
+	{
+		System.out.println("Maximum temp is : "+maxtemp);
+	}
+	public void ambienttemp()
+	{
+		System.out.println("amibient temp is : "+ambienttemp);
+	}
+	public int settemp(int temp)
+	{
+		System.out.println("Set tempperture is : "+temp);
+		ambienttemp();
+		return temp;
+	}
+
+}
+
+
+
+
+
+import java.util.Scanner;
+class ACDriver 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner (System.in);
+		System.out.print("Enter the temperture is : ");
+		int temp = s.nextInt();
+		AC a1 = new AC();
+		
+		a1.brand = "Blue Star";
+		a1.prise = 49999.99;
+		a1.color="White";
+
+		//a1.displayAC();
+		a1.mintemp();
+		a1.maxtemp();
+		a1.ambienttemp();
+		//a1.settemp(15);
+		//int temp = 34;
+
+		if (temp<=a1.maxtemp  && temp>=a1.mintemp)
+		{
+			a1.ambienttemp=a1.settemp(temp);
+			a1.ambienttemp();
+
+		}else
+		{
+			System.out.println("Can not attempt this temperture");
+		}
+
+	}
+}
