@@ -1,0 +1,38 @@
+// raise value is negitive therir is problem
+
+import java.util.Scanner;
+public class Power {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the Base Value : ");
+		int base = s.nextInt();
+		System.out.println("Enter the Raise value : ");
+		int raise = s.nextInt();
+		
+		//int power = power(base,raise);
+		//System.out.println("Power is : "+power);
+		
+		
+		int pow = 1;
+		if (raise>0) {
+			for (int i = 1; i <= raise ; i++) {
+				pow *= base; 
+			}
+			System.out.println("Power is :"+pow);
+		} else if(raise==0) {
+			 pow = base;
+			 System.out.println("Power is :"+pow);
+		}else {
+			for (int i = raise; i < 0 ; i++) {
+				pow *= base; 
+			}
+			 System.out.println("Power is :"+pow);
+			double pow1 = 1/pow;
+			 System.out.println("Power is :"+pow1);
+			 float d = 1/8;
+			 System.out.println(d);
+
+		}
+		 
+	}
+}
