@@ -1,0 +1,13 @@
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
+public class Main {
+  public static void main(String[] argv) throws Exception {
+
+    NumberFormat formatter = new DecimalFormat("0.00");
+    String s = formatter.format(-.567); // -0.57
+    System.out.println(s);
+  }
+}
+
+   
