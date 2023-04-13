@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class Consonant 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter the length of an array : ");
+		int size = s.nextInt();
+
+		char[] ch = new char[size];
+		for (int i=0 ; i< ch.length ; i++ )
+		{
+			ch[i] = s.next().charAt(0);
+		}
+
+		for (int i=0 ; i< ch.length ; i++ )
+		{
+			if (ch[i]!='A'&&ch[i]!='E'&&ch[i]!='I'&&ch[i]!='O'&&ch[i]!='U'&&ch[i]!='a'&&ch[i]!='e'&&ch[i]!='i'&&ch[i]!='o'&&ch[i]!='u')
+			{
+				System.out.print(ch[i]+" ");
+			}
+		}
+	}
+}
