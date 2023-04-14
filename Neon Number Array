@@ -1,0 +1,35 @@
+package jsp.com;
+import java.util.Scanner ;
+public class NeonNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s = new Scanner (System.in);
+		System.out.println("Enter the size of array : ");
+		
+		int[] a = new int [s.nextInt()];
+		for (int i = 0; i < a.length; i++) {
+			a[i] = s.nextInt();
+		}
+		
+		for (int i = 0; i < a.length; i++) {
+			isNeon(a[i]);
+		}
+		
+	}
+	
+	public static void isNeon(int num) {
+		int sum = 0;
+		int sqrt = num*num;
+		
+		for(int i=sqrt ; i!=0 ; i/=10) {
+			int rem = i%10;
+			sum += rem;
+		}
+		
+		if (sum == num) {
+			System.out.println(num+ " is Neon Number.");
+		}
+	}
+
+}
