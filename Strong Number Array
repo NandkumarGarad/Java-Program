@@ -1,0 +1,42 @@
+package jsp.com;
+import java.util.Scanner;
+public class StrongNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the size of array : ");
+		int[] a = new int[s.nextInt()];
+		for (int i = 0; i < a.length; i++) {
+			a[i] = s.nextInt();
+		}
+		
+		for (int i = 0; i < a.length; i++) {
+			isStrong( a[i]);
+		}
+		
+	}
+	
+	public static void isStrong(int num) {
+		int sum = 0;
+		for (int i =num ; i !=0 ; i/=10) {
+			int rem = i%10;
+			//System.out.println(isFact(rem));
+			sum +=	isFact(rem);
+		}
+		if (sum==num) {
+			System.out.println(num +" is Strong Number.");
+		}
+		System.out.println("Sum is : "+sum);
+	}
+	
+	
+	public static int isFact(int num) {
+		int fact = 1;
+		for(int i=num ; i>1 ;i--) {
+			fact *= i;
+		}
+		return fact;
+	}
+
+}
