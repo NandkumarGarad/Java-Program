@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class MargeArray 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter the size of first array : ");
+		int size1 = s.nextInt();
+		int[] a = new int[size1];
+		for (int i = 0 ; i< a.length ; i++ )
+		{
+			a[i] = s.nextInt();
+		}
+
+		System.out.print("Enter the size of second array : ");
+		int size2 =  s.nextInt();
+		int[] b = new int[size2];
+		for (int i=0 ; i< b.length ; i++ )
+		{
+			b[i] = s.nextInt();
+		}
+		
+		int index = 0;
+		int[] c = new int[size1+size2];
+		for (int i = 0 ; i <a.length ; i++ )
+		{
+			c[index++] = a[i];
+		}
+
+		for (int i=0 ; i< b.length ; i++ )
+		{
+			c[index++] = b[i];
+		}
+
+		for (int i=0 ; i < c.length ; i++ )
+		{
+			System.out.print(c[i]+" ");
+		}
+	}
+}
