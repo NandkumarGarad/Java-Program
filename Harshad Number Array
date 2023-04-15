@@ -1,0 +1,33 @@
+package jsp.com;
+import java.util.Scanner; 
+public class HarshadNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the size of an array is : ");
+		int size = s.nextInt();
+		int[] a =new int[size];
+		for (int i = 0; i < a.length; i++) {
+			a[i] = s.nextInt();
+		}
+		
+		for (int i = 0; i < a.length; i++) {
+			int sum = sumOfDigit(a[i]);
+			if(a[i]%sum==0) {
+				System.out.println(a[i]+" is Harshad Number.");
+			}
+		}
+	}
+	
+	public static int sumOfDigit(int num) {
+		int sum = 0 ;
+		
+		for (int i=num ; i!=0 ; i/=10) {
+			int rem = i%10;
+			sum += rem;
+		}
+		return sum;
+	}
+
+}
