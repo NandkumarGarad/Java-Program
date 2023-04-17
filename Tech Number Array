@@ -22,6 +22,7 @@ public class TechNumber {
 				int sqrt = sum*sum;
 				if(sqrt == a[i]) {
 					System.out.println(a[i]+" is Tech Number.");
+					return;
 				}
 			}
 		}
