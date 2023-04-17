@@ -23,6 +23,31 @@ public class Xyloem_Phloem {
 		{
 			System.out.println("It is Poloem.");
 		}
+		
+		/// or 
+		
+		for(int i = 0 ; i<a.length ; i++){
+		isxyloem(a[i]);
+		}
+	}
+	
+	public static void isxyloem(int num) {
+		int lastDigit = num %10;//8
+		int firstDigit = PalindromeNumber.revNum(num)%10;//1
+		int sum1 = firstDigit+lastDigit;//8+1 = 9
+		int num1 = num/10;//1234
+		int sum2 = 0;//9
+		while(num1>9) { //12>9
+			int rem = num1%10;//2
+			sum2+= rem;//7+2
+			num1/=10;//1
+		}
+		
+		if(sum1==sum2) {
+			System.out.println(num+" is Xyloem.");
+		}else {
+			System.out.println(num+" is Phloem.");
+		}
 	}
 
 }
