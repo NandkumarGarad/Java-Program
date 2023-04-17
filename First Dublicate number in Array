@@ -1,0 +1,30 @@
+// create an  int type array and store elements and print first dublicate element.
+
+package jsp.com;
+import java.util.Scanner;
+public class FristDublicate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner  s = new Scanner(System.in);
+		System.out.println("Enter the size of an array : ");
+		int[] a = new int[s.nextInt()];
+		for (int i = 0; i < a.length; i++) {
+			a[i] = s.nextInt();
+		}
+		
+		for (int i = 0; i < a.length; i++) {
+			int count = 0 ;
+			for (int j = i+1; j < a.length; j++) {
+				if (a[i]==a[j]) {
+					count++;
+				} 
+			}
+			if(count!=0) {
+				System.out.println("First Dublicate element is : "+a[i]);
+				return;
+			}
+		}
+	}
+
+}
