@@ -1,0 +1,50 @@
+// create int type of an array and store element and print unique number.
+
+package jsp.com;
+import java.util.Scanner;
+public class UniqueNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the size of an array : ");
+		int size = s.nextInt();
+		int[] a = new int[size];
+		for (int i = 0; i < a.length; i++) {
+			a[i] = s.nextInt();
+		}
+		
+		for (int i = 0; i < a.length; i++) {
+			isUniqueNum(a[i]);
+		}
+	}
+	
+	
+	public static void isUniqueNum(int num) {
+		int n = num;
+		boolean flag = false ;
+		while(num>0) {
+			
+		
+			int last = num % 10;
+			int num1 = num/10;
+			
+			while(num1>0) {
+				int rem = num1%10;
+				if(last == rem) {
+					//System.out.println("It is not unique number.");
+					flag = true;
+					return;
+				}
+				num1/=10;
+			}
+			num/=10;
+		}
+		
+		if (flag == false) {
+			System.out.println(n+ " is Unique Number.");
+		}
+		
+	}
+
+}
