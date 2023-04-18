@@ -1,0 +1,42 @@
+/*
+5)create a int type array and store element print count of occurrences
+i/p: 6
+	 1 2 2 3 3 2
+o/P:
+count of 1=1
+count of 2=3
+count of 3=2
+*/
+
+import java.util.Scanner; 
+class  CountOccurrences
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter the size of an array : ");
+		int size = s.nextInt();
+		int[] a = new int[size];
+		for (int i=0 ; i< a.length ; i++ )
+		{
+			a[i] = s.nextInt();
+		}
+
+		for (int i=0 ; i<a.length ; i++ )
+		{
+			int count = 1 ; 
+			for (int j=i+1 ; j<a.length ; j++ )
+			{
+				if (a[i]==a[j])
+				{
+					count++;
+					a[j]=0;
+				}
+			}
+			if (a[i]!=0)
+			{
+				System.out.println("Count of "+a[i]+" : "+count);
+			}
+		}
+	}
+}
