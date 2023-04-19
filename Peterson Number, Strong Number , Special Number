@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class PetersonNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+
+		System.out.print("Enter the number : ");
+		int num = s.nextInt();
+		int sum = 0 ;
+		for (int i=num ; i!=0 ; i/=10 )
+		{
+			int rem = i%10;
+			sum += isFactorial(rem);
+		}
+
+		if (num == sum )
+		{
+			System.out.println(num+" is peterson number.");
+		}
+		else
+		{
+			System.out.println(num+" is not peterson number.");
+		}
+	}
+
+	public static int isFactorial(int num)
+	{
+		int fact = 1 ;
+		for (int i=num ; i>0 ; i-- )
+		{
+			fact *= i;
+		}
+		return fact;
+	}
+}
