@@ -1,0 +1,29 @@
+package jsp.com;
+
+import java.util.Iterator;
+
+public class product {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		int[] a = {2,1,4,8};
+		for (int i = 0; i < a.length; i++) 
+		{
+			int prod = 1 ;
+			for (int j = 0; j < a.length; j++)
+			{
+				if (i!=j) {
+					prod *= a[j];
+				}
+			}
+			if(a[i]==prod)
+			{
+				System.out.println(true);
+				return;
+			}
+		}
+		System.out.println(false);
+	}
+
+}
