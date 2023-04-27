@@ -1,0 +1,14 @@
+package strings;
+
+public class ByteArrayIntoString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		byte[] b = {51,52,51,112,91,111};
+		
+		String s = new String(b);
+		
+		System.out.println(s);
+	}
+
+}
