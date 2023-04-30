@@ -1,0 +1,36 @@
+package strings;
+
+public class UniqueCharOfString 
+{
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		String s = "nandkumar";
+		
+		int freq[] = new int[s.length()];
+		for (int i = 0; i < s.length(); i++) 
+		{
+			int count =1;
+			for (int j = i+1; j < s.length(); j++) 
+			{
+				if (s.charAt(i)==s.charAt(j)) 
+				{
+					count++;
+					freq[j]=-1;
+				}
+			}
+			if(freq[i]!=-1)
+			{
+				freq[i]=count;
+			}
+		}
+		System.out.println("Unique Charecter");
+		for (int i = 0; i < freq.length; i++) {
+			if (freq[i]==1) {
+				System.out.println(s.charAt(i));
+			}
+		}
+	}
+
+}
