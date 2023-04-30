@@ -1,0 +1,82 @@
+package strings;
+import java.util.Scanner;
+public class VowlesReplaceUpperToLower 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner scan  = new Scanner(System.in); 
+		// TODO Auto-generated method stub
+		System.out.println("Enter the String : ");
+		String s = scan.nextLine();
+//		//String s = new String("AEIOU aeiou qwrtye");
+//		String ans = "";
+//		for (int i = 0; i < s.length(); i++) 
+//		{
+//			char ch = s.charAt(i);
+//			 switch(ch) 
+//			 {
+//			 case 'a' :{ans+='A';
+//				        break; 
+//			           }
+//			 case 'e' :{ans+='E';
+//				        break; 
+//			           }
+//			 case 'i' :{ans+='I';
+//				        break; 
+//			           }
+//			 case 'o' :{ans+='O';
+//				        break; 
+//			           }
+//			 case 'u' :{ans+='U';
+//				       break; 
+//			           }
+//			 case 'A' :{ans+='a';
+//						break; 
+//			 		   }
+//			 case 'E' :{ans+='e';
+//						break; 
+//			 		   }
+//			 case 'I' :{ans+='i';
+//						break; 
+//			 		   }
+//			 case 'O' :{ans+='o';
+//						break; 
+//			 		   }
+//			 case 'U' :{ans+='u';
+//						break; 
+//			 		   }
+//			 default :{ans+=ch;}
+//			 
+//			 }
+//		}
+//		System.out.println(ans);
+//		
+		System.out.println(replceVolesUpperToLower(s));
+		
+	}
+	
+	public static String replceVolesUpperToLower(String s)
+	{
+		String ans = "";
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+			{
+				char chUpper =(char) (ch-32);
+				ans=ans+chUpper;
+			}
+			else if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+			{
+				char chLower = (char) (ch+32);
+				ans=ans+chLower;
+			}
+			else
+			{
+				ans+=ch;
+			}
+		}
+		return ans;
+	}
+
+}
