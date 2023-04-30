@@ -1,0 +1,38 @@
+package strings;
+
+public class AllDuplicateChar
+{
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		String s = "nandkumargarad";
+		int freq[] = new int[s.length()];
+		for (int i = 0; i < s.length(); i++)
+		{
+			int count=1;
+			for (int j = i+1; j < freq.length; j++)
+			{
+				if (s.charAt(i)==s.charAt(j)) 
+				{
+					count++;
+					freq[j]=-1;
+				}
+			}
+			if(freq[i]!=-1)
+			{
+				freq[i]=count;
+			}
+		}
+		
+		for (int i = 0; i < freq.length; i++)
+		{
+			//System.out.print(freq[i]+" "+s.charAt(i));
+			if(freq[i]>1)
+			{
+				System.out.println(s.charAt(i));
+			}
+		}
+	}
+
+}
