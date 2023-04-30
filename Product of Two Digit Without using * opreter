@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class  ProductOfTwoNumber
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the Frist Number : ");
+		int n1 = scan.nextInt(); 
+
+		System.out.println("Enter the Scecond Number : ");
+		int n2 = scan.nextInt(); 
+		
+		int prod = 0;
+		for (int i=1 ;i<=n2 ; i++ )
+		{
+			prod +=n1;
+		}
+
+		System.out.println("Product Of "+n1+" and "+n2 +" is : "+ prod);
+	}
+}
