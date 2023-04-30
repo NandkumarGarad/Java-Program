@@ -1,0 +1,31 @@
+package strings;
+
+public class SwapTwoNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 154;
+		int b = 142;
+		
+		// with the help of temp variable. 
+		System.out.println("Before swaping : "+a +" and "+b);		
+		int temp = a ;
+		a = b ;
+		b = temp ;
+		System.out.println("After Swaping : "+a +" and "+b);
+		
+		// without temp variable 
+		
+		int x = 23;
+		int y = 98;
+		System.out.println("Before swaping : "+x +" and "+y);				
+		x = x+y;
+		y = x-y;
+		x = x-y;
+		System.out.println("After Swaping : "+x +" and "+y);
+		
+		
+		
+	}
+
+}
