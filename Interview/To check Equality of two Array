@@ -1,0 +1,30 @@
+package strings;
+
+import java.util.Arrays;
+
+
+public class EqualityCheckTwoArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a = {1,2,3,4};
+		int[] b = {1,2,3,4};
+		
+		System.out.println(Arrays.equals(a, b));
+		
+		for (int i = 0; i < a.length; i++) {
+			for (int j = i; j < b.length; j++) {
+				if (a[i]==b[j]) {
+					break;
+				}else
+				{
+					System.out.println("Array a and Array b are not same");
+					return;
+				}
+			}
+			
+		}
+		System.out.println("Array a and Array b are same");
+	}
+
+}
