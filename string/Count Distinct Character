@@ -1,0 +1,45 @@
+package strings;
+
+public class CountDistinctCharecter
+{
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		
+		String a  = new String("AaBbCcdRfGh4");
+		String s = a.toLowerCase();
+		System.out.println(s);
+		
+		int freq[] = new int[s.length()];
+		for (int i = 0; i < s.length(); i++)
+		{
+			int count =1;
+			for (int j =i+1; j < s.length(); j++) 
+			{
+				if(s.charAt(i)==s.charAt(j))
+				{
+					count++;
+					freq[j]=-1;
+				}
+			}
+			if(freq[i]!=-1)
+			{
+				freq[i]=count;
+			}
+		}
+		
+		int count1 =0;
+		for (int i = 0; i < freq.length; i++)
+		{
+			if(freq[i]==1)
+			{
+				count1++;
+				System.out.print(s.charAt(i)+" count is : "+freq[i]);
+			}
+			System.out.println();
+		}
+		System.out.println(count1);
+	}
+
+}
