@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class LongestPalindromicSubstring 
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the String : ");
+		String s = scan.next();
+    
+		for (int i=0 ; i<s.length(); i++ )
+		{
+			for(int j=i; j<s.length();j++)
+			{
+				String ans="";
+				for(int k=i;k<=j;k++)
+				{
+					ans+=s.charAt(k); 
+				}
+				System.out.println(ans); 
+				}
+			}
+		}
+ 	}
+}
