@@ -1,0 +1,21 @@
+package recursion.com;
+
+import java.util.Scanner;
+
+public class SumOfNaturlNumber {
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the Number : ");
+		int num = scan.nextInt();//5
+		System.out.println(sumOfNatrualNumber(num));
+	}
+
+	public static int sumOfNatrualNumber(int num) {
+		if (num < 0) {//<0
+			return 0;
+		} else {
+			return num + sumOfNatrualNumber(num - 1);// 9
+		}
+	}
+}
