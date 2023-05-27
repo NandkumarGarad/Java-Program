@@ -1,0 +1,22 @@
+package recursion.com;
+
+import java.util.Scanner;
+
+public class Factorial {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the Number : ");
+		int num = scan.nextInt();
+
+		int result = recursion(num);
+		System.out.println(result);
+	}
+
+	public static int recursion(int num) {
+		if (num == 0) {
+			return 1;
+		} else {
+			return num * recursion(num - 1);
+		}
+	}
+}
