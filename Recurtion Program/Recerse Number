@@ -1,0 +1,28 @@
+package recursion.com;
+
+import java.util.Scanner;
+
+public class ReverseNumber {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the Number : ");
+		int num = scan.nextInt();
+		if (num%10!=0 || num==0) {
+			System.out.println(reverseNum(num));
+		}else
+		{
+			System.out.println("Reverse Number not start with zero!");
+		}
+	}
+
+	static int rev = 0;
+
+	public static int reverseNum(int n) {
+		if (n == 0) {
+			return rev;
+		} else {
+			rev = rev * 10 + n % 10;
+			return reverseNum(n / 10);
+		}
+	}
+}
