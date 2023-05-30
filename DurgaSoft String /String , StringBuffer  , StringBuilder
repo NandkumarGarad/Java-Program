@@ -1,0 +1,103 @@
+class EqualsMethodString 
+{
+	public static void main(String[] args) 
+	{
+		String s1 = new String("Hello");   // new Object created and give reference    
+		String s2 = new String("Hello");  // new Object created and give new  reference 
+
+		System.out.println(s1); // Hello
+		System.out.println(s2); // Hello
+	
+//1    // == Operater
+		System.out.println(s1==s2); //   false    becuse  == Operator will check refrease Comparision.	
+
+//( == ) :--> Operator is use to reference comparision.  --> String -->   result --> false
+
+
+	
+//2	// .equals() Method
+	   System.out.println(s1.equals(s2)); // return --> true
+/*
+  .equals() -->  method is use to also reference comparision But 
+                       1> .equals() method present in Object Class.  and String is subClass of Object Class.
+					   2>  .equals() method is overriden it will check Content Comparision.
+					   3> Both the content are same then  return --> true.
+
+					   But StringBuffer and StringBuilder is  not Overriden  .equals() Method. It will check only referencs comparison.  --> output  false
+
+*/
+
+
+//3	// hashCode() Mehod	
+		System.out.println(s1.hashCode());//69609650
+		System.out.println(s2.hashCode()); //69609650
+
+		System.out.println(s1.hashCode()==s2.hashCode());   // --> true
+	}
+}
+
+
+
+
+ 
+class EqualMethodStringBuffer
+{
+	public static void main(String [] args)
+	{
+		StringBuffer sb1 = new StringBuffer("Hello");
+		StringBuffer sb2 = new StringBuffer("Hello");
+
+		System.out.println(sb1);    // Hello
+		System.out.println(sb2);    // Hello
+
+		System.out.println(sb1==sb2);           // false
+		System.out.println(sb1.equals(sb2));   // false
+
+
+
+
+// .hashCode()  :-->method Present in  Objce Class  
+		System.out.println(sb1.hashCode());    // 366712642     -->return refrence
+		System.out.println(sb2.hashCode());    // 1829164700
+	
+
+		
+	}
+}
+
+
+
+class EqualsMethodStringBuilder
+{
+	public static void main(String [] args)
+	{
+		StringBuilder sb1 = new StringBuilder("Hello");    
+		StringBuilder sb2 = new StringBuilder("Hello");   
+
+		System.out.println(sb1==sb2);           // false
+		System.out.println(sb1.equals(sb2));   // false
+
+
+
+		// .hashCode()  :-->method Present in  Objce Class  
+		System.out.println(sb1.hashCode());    // 366712642     -->return refrence
+		System.out.println(sb2.hashCode());    // 1829164700
+	
+	}
+}
+
+/*
+
+1]  ( == ) :--> Operator is use to reference comparision.  --> String            => result   --> false
+																			  --> StringBuffer      => result   --> false 
+																			  -->StringBuilder      => result   --> false
+
+2]  .equals()  :--> Method is use to refrence Comparision  --> String            => result   -->  TRUE
+                                                                                --> StringBuffer    => result   -->  false
+                                                                                --> StringBuilder   => result   -->  false
+
+3] hashCode():--> Method is use to                                --> String            => result   --> TRUE
+																				--> StringBuffer    => result   --> TRUE
+																				--> StringBuilder   => result   --> TRUE
+			
+*/
