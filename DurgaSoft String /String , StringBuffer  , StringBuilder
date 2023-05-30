@@ -89,15 +89,15 @@ class EqualsMethodStringBuilder
 /*
 
 1]  ( == ) :--> Operator is use to reference comparision.  --> String            => result   --> false
-																			  --> StringBuffer      => result   --> false 
-																			  -->StringBuilder      => result   --> false
+						           --> StringBuffer      => result   --> false 
+					                   -->StringBuilder      => result   --> false
 
 2]  .equals()  :--> Method is use to refrence Comparision  --> String            => result   -->  TRUE
-                                                                                --> StringBuffer    => result   -->  false
-                                                                                --> StringBuilder   => result   -->  false
+                                                           --> StringBuffer      => result   -->  false
+                                                           --> StringBuilder     => result   -->  false
 
-3] hashCode():--> Method is use to                                --> String            => result   --> TRUE
-																				--> StringBuffer    => result   --> TRUE
-																				--> StringBuilder   => result   --> TRUE
+3] hashCode():--> Method is use to                         --> String            => result   --> TRUE
+						           --> StringBuffer      => result   --> TRUE
+						           --> StringBuilder     => result   --> TRUE
 			
 */
