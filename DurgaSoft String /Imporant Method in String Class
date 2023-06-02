@@ -1,0 +1,101 @@
+/*
+		String class Mehod
+		1]  public char charAt(int index) ;   :- use to access perticular Charecter from the string. 
+
+		2] public String concat(String s);   :- use to join to String together.
+
+		3] public boolean equals(Object o) :- this method use to compare Content  ex Username , email
+
+		4] public boolean equals(String s); :- this method use to cmpare case  ex password
+
+		5] public boolean isEmpty();        :- it use to check whiter string is empty or not 
+
+		6] public String substring(int start); :-  use to create substring 
+
+		7] public String substring(int start, int end);  :-  here end actual value is end-1.
+
+		8] public String replace(char old , char new);  :-   
+
+		9] public int length();  :- this method is use to find length of chreacter of a given String 
+
+		10] public int indexOf(char ch);
+
+		11] public int lastIndexOf(char ch); 
+
+		12] public String toLowerCase();
+
+		13] Public String toUpperCase();
+
+		14] pubilc String trim();  :- use to remove begining and ending emply speaces
+*/
+
+
+class StringMethods 
+{
+	public static void main(String[] args) 
+	{
+		// 1 charAt(int index);
+		String  s = "Nandkuamr";
+		System.out.println(s.charAt(4));  // k
+//		System.out.println(s.charAt(30));  //  RE :- StringIndexOutOfBoundsException
+		
+		//2  concat(String s);
+		String s1 = "Nandkumar";
+		System.out.println(s1.concat("Garad")); // NandkumarGarad
+		s1 = s1.concat("Shobha");
+		System.out.println(s1);     // NandkumarShobha
+		s1+="Garad";
+		System.out.println(s1);     // NandkumarShobhaGarad
+
+		//3  equals(Object o);
+		String s2 = "Nandkumar";
+		String s3 = "nandkumar";
+		System.out.println(s2.equals(s3)); // false  
+
+		//4 equalsIgnoreCase(String s);
+		String s4 = "Nandkuamr";
+		String s5 = "nandkuamr";
+		System.out.println(s2.equalsIgnoreCase(s3)); // true  
+
+		//5 isEmpty();
+		String s6 = "";
+		System.out.println(s6.isEmpty()); //true
+
+		//6 substring(int index);
+		String s7 = "Nandkumar";
+		System.out.println(s7.substring(4));  //kumar
+
+		//7 substring(int start , int end);
+		System.out.println(s7.substring(2,4));  //nd
+	
+
+		//8 replace(char old, char new);
+		String s8 = "Nandkumar";
+		System.out.println(s8.replace('N','A')); //Anadkumar
+
+		//9 length();
+		String s9 = "Nandkumar";
+		System.out.println(s9.length()); // 9
+
+		//10 indexOf(char ch);
+		String s10 = "Nandkumar";
+        System.out.println(s10.indexOf('a')); // 1
+
+		//11 lastIndexOf(char ch);
+		String s11 = "Nandkumar";
+		System.out.println(s11.lastIndexOf('a'));  //7
+
+		//12 toLowerCase();
+		String s12 = "Nandkumar";
+		System.out.println(s12.toLowerCase());
+
+		//13 toUpperCase();
+		String s13 = "Nandkuamr";
+		System.out.println(s13.toUpperCase());
+
+
+		//14 trim();
+
+	
+	}
+}
