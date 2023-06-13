@@ -1,0 +1,49 @@
+
+their are two way find array length 
+1 for each loop  -->
+
+public class LengthOfArray {
+
+	public static void main(String[] args) {
+		int[] a = { 1, 5, 7, 3, 5, 2, 1 };
+		int ct =0;
+		for (int i:a) {
+			 ct++;
+		}
+		System.out.println("Length of an array is : "+ct);
+  }
+}
+
+2 try and catch block -->
+
+public class LengthOfArray {
+
+	public static void main(String[] args) {
+		int[] a = { 1, 5, 7, 3, 5, 2, 1 };
+		int var;
+		int ct = 0;
+		try {
+			while (true) {
+				var = a[ct];
+				ct++;
+			}
+
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Length of an Array is : "+ct);
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+ 
+
+
+
+1
