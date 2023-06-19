@@ -1,0 +1,37 @@
+package strings;
+
+public class RotationsString {
+
+	public static void main(String[] args) {
+		String str = "XYZ";
+		String str2 = "YXZ";
+		boolean flag = false;
+		if (!(str.equals(str2))) {
+			String s = isRoteate(str);
+			while (!(str.equals(s))) {
+				if (s.equals(str2)) {
+					flag = true;
+					break;
+				} else {
+					s = isRoteate(s);
+				}
+			}
+			if (flag == true) {
+				System.out.println(true);
+			} else {
+				System.out.println(false);
+			}
+		} else {
+			System.out.println(true);
+		}
+	}
+
+	public static String isRoteate(String str) {
+		String ans = "";
+		ans += str.charAt(str.length() - 1);
+		for (int i = 0; i < str.length() - 1; i++) {
+			ans += str.charAt(i);
+		}
+		return ans;
+	}
+}
