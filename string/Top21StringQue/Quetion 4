@@ -1,0 +1,39 @@
+package strings;
+
+import java.util.Scanner;
+
+public class RemovecharactersfromthefirstString {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the first String :");
+		String s1 = sc.nextLine();
+		System.out.println("Enter the second String : ");
+		String s2 = sc.nextLine();
+		
+		//String s1 = "India is great";
+		//String s2 = "in";
+
+		s1 = s1.toLowerCase();
+		s2 = s2.toLowerCase();
+
+		String ans = s1;
+		for (int i = 0; i < s2.length(); i++) {
+
+			ans = removeCahr(ans, s2.charAt(i));
+		}
+		System.out.println(ans.toUpperCase());
+		
+		sc.close();
+	}
+
+	public static String removeCahr(String str, char ch) {
+		String ans = "";
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) != ch) {
+				ans += str.charAt(i);
+			}
+		}
+		return ans;
+	}
+}
