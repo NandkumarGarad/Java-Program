@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "poppins", sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #079ded;
+}
+
+.continer {
+	width: 100%;
+	display: flex;
+	max-width: 400px;
+	background: #fff;
+	border-radius: 15px;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.SignUp {
+	width: 400px;
+}
+
+form {
+	width: 250px;
+	margin: 60px auto;
+}
+
+h1 {
+	margin: 20px;
+	text-align: center;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+form{
+	display: block;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 5px;
+}
+
+input {
+	width: 100%;
+	margin: 2px;
+	border: none;
+	outline: none;
+	padding: 8px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+button {
+	border: none;
+	outline: none;
+	padding: 8px;
+	width: 252px;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+	border-radius: 5px;
+	background: #079ded;
+}
+
+button:hover {
+	background: #0e53cf;
+}
+
+p {
+	display: flex;
+	margin: 20px;
+	margin-left: 55px;
+}
+
+a {
+	color: black;
+}
+</style>
+</head>
+<body>
+	<div class="continer">
+		<div class="SignUp">
+			<form action="sginup">
+				<h1>Sign Up</h1>
+				<br> <br> <input type="text" placeholder="First Name" name="firstname" required> 
+				<input type="text" placeholder="Last Name" name="lastname" required> <br> <br>
+				<input type="email" placeholder="Email" name="email" required> <br><br>
+				<input type="password" placeholder="Password" name="password" required> <br> <br>
+				<input type="password" placeholder="Confirm Password" name="confirmpassword" required> <br><br> <br> 
+				<input type="checkbox" required><span>I accept the Terms Of Use & Privacy Policy.</span> <br> <br> <br>
+				<button><input  type="submit"></button>
+				<p>
+					Already have an account?<a href="Login.html">Login here</a>
+				</p>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

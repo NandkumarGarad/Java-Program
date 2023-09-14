@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: "poppins",sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #079ded;
+}
+
+.continer{
+    width: 100%;
+    display: flex;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+.login{
+    width: 400px;
+}
+form {
+    width: 250px;
+    margin: 60px auto;
+}
+h1{
+    margin: 20px;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+hr{border-top: 2px solid #079ded;
+}
+form label{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+}
+input{
+    width: 100%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 252px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: #079ded;
+}
+button:hover{
+    background: #0e53cf;
+}
+p{
+    display: flex;
+    margin: 20px;
+    margin-left: 55px;
+}
+a{
+    color: black;
+}
+</style>
+</head>
+<body>
+ <div class="continer">
+        <div class="login">
+            <form action="">
+                <h1>Login</h1>
+                <hr>
+                <br>
+                <br>
+                <label >Email</label>
+                <input type="email" required="required">
+                <label for="">Password</label>
+                <input type="password" required="required">
+                <button>submit</button>
+                <p><a href="">Forget Password?</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
