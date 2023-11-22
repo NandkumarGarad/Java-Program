@@ -1,0 +1,35 @@
+package string;
+
+public class TimeConversion {
+	public static void main(String[] args) {
+		String time = "03:00:12PM";
+		//char ch = time.charAt(8);
+		//System.out.println(time.substring(0,8));
+		//System.out.println(ch);
+		System.out.println(timeConversion(time));
+	}
+	
+	public static String timeConversion(String str) {
+		
+		String sub = str.substring(0,8);
+		String[] arr = sub.split(":");
+		
+		if(str.charAt(8)=='P') {
+			 int a = Integer.parseInt(arr[0]);
+			 a+=12;
+			 String p = String.valueOf(a);
+			 arr[0]=p;
+			if(a==24) {
+				if(arr[2].equals("00")) {
+					arr[0]="24";					
+				}else {
+					arr[0]="00";							
+				}
+			}
+			 return arr[0]+":"+arr[1]+":"+arr[2];	
+		}else {
+			return arr[0]+":"+arr[1]+":"+arr[2];
+		} 
+	}
+
+}
